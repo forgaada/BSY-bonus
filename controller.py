@@ -6,7 +6,7 @@ import re
 
 GITHUB_API = "https://api.github.com"
 # change for your API token
-API_TOKEN = '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'
+API_TOKEN = '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'
 GIST_ID = '11fc787784a6a18ee1b89f6ceb4f4803'
 last_check_time = datetime.datetime.now()
 
