@@ -1,9 +1,10 @@
 # BSY 2022/2023 Bonus Assignment
 This repository serves for purposes of Stage 5 implementation in BSY bonus assignment.
 
-Example video: [example_video.mp4](example_video.mp4).
-
 ## How it works?
+
+![ezgif.com-gif-maker(1).gif](..%2F..%2F..%2F..%2F..%2FDownloads%2Fezgif.com-gif-maker%281%29.gif)
+
 Bots (`bot.py`) and Controller (`controller.py`) communicate over gist.github.com channel.
 
 Communication is done by creating comments in Gist and embedding hidden commands to a markdown
