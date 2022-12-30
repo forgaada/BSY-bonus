@@ -1,8 +1,7 @@
 # BSY 2022/2023 Bonus Assignment
 This repository serves for purposes of Stage 5 implementation in BSY bonus assignment.
 
-Implementation uses temporary GitHub personal access token (`API_TOKEN` in `bot.py` and `controller.py`). Ideally change it 
-for your own access token before running.
+Implementation uses temporary GitHub personal access token (`API_TOKEN` in `bot.py` and `controller.py`).
 
 ## How it works?
 

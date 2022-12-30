@@ -5,8 +5,7 @@ import json
 import re
 
 GITHUB_API = "https://api.github.com"
-# change for your API token
-API_TOKEN = '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'
+API_TOKEN = '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'
 GIST_ID = '11fc787784a6a18ee1b89f6ceb4f4803'
 last_check_time = datetime.datetime.now()
 
