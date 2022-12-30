@@ -3,7 +3,7 @@ This repository serves for purposes of Stage 5 implementation in BSY bonus assig
 
 ## How it works?
 
-![ezgif.com-gif-maker(1).gif](..%2F..%2F..%2F..%2F..%2FDownloads%2Fezgif.com-gif-maker%281%29.gif)
+![example.gif](example.gif)
 
 Bots (`bot.py`) and Controller (`controller.py`) communicate over gist.github.com channel.
 
