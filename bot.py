@@ -12,8 +12,8 @@ from cryptography.fernet import Fernet
 
 GITHUB_API = "https://api.github.com"
 # change for your API token
-f = Fernet('PlMJ3m8koaqClLbqjbvuCKv2UBAxkxkHdEX1kCWMqgw=')
-encrypted_string = b'gAAAAABjr29NMI4xytRfZNKGFCIhRaoWe5DMAPG0m2f4pMXeXTJCNgYezZxTN0bcjysFvHqdzqAbystPV2_50DdkvVPJg35A6E0J6TxwD1SuLbLos9-DY6pE6klSmJwKQf9bJfENsw1Q'
+f = Fernet('58jYB5NRdeTGN74-V0atvV4yRo8wkAZrpzcDDD0_f6I=')
+encrypted_string = b'gAAAAABjr3QSDZfB_tcIJNa8_8sQpNgdCYgXGeMdaFj4ayRyGo7E5TU2olVB6y_1NB6Wig8kA5xHvyVRYONakITOu5Z7z8gu2w4ITYw0kHpPrHTZKPuAAu8C7_ggcECirhAofBu8vG5T'
 API_TOKEN = f.decrypt(encrypted_string).decode("utf-8")
 GIST_ID = '11fc787784a6a18ee1b89f6ceb4f4803'
 BOT_ID = uuid.uuid4()
