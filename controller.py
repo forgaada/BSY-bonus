@@ -3,9 +3,12 @@ import datetime
 import requests
 import json
 import re
+from cryptography.fernet import Fernet
 
 GITHUB_API = "https://api.github.com"
-API_TOKEN = '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'
+f = Fernet('PlMJ3m8koaqClLbqjbvuCKv2UBAxkxkHdEX1kCWMqgw=')
+encrypted_string = b'gAAAAABjr29NMI4xytRfZNKGFCIhRaoWe5DMAPG0m2f4pMXeXTJCNgYezZxTN0bcjysFvHqdzqAbystPV2_50DdkvVPJg35A6E0J6TxwD1SuLbLos9-DY6pE6klSmJwKQf9bJfENsw1Q'
+API_TOKEN = f.decrypt(encrypted_string).decode("utf-8")
 GIST_ID = '11fc787784a6a18ee1b89f6ceb4f4803'
 last_check_time = datetime.datetime.now()
 
