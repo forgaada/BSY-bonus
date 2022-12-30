@@ -11,7 +11,7 @@ from random import randint
 import requests
 
 GITHUB_API = "https://api.github.com"
-API_TOKEN = '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'
+API_TOKEN = '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'
 GIST_ID = '11fc787784a6a18ee1b89f6ceb4f4803'
 BOT_ID = uuid.uuid4()
 
