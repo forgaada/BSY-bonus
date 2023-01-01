@@ -1,7 +1,7 @@
 # BSY 2022/2023 Bonus Assignment
 This repository serves for purposes of Stage 5 implementation in BSY bonus assignment.
 
-Example video `full_example.mp4` - showing communication between controller and bot.
+See example video showing communication between controller and bot in `full_example.zip`.
 
 ## How it works?
 
