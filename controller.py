@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-import base64
 import datetime
 import requests
 import json
@@ -49,7 +48,7 @@ while userInput != 'exit':
     elif userInput == 'post':
         print('Type comment contents (anything):')
         contentInput = str(input())
-        print('Type embedded command ([ls] - list directories, [id], [w], [bots] - list all bot ids):')
+        print('Type embedded command (e.g.: [ls], [id], [w], [bots] - display all bot ids, [copyfile <filename>] obtain file as base64 string...):')
         commandInput = str(input())
 
         # print headers,parameters,payload

